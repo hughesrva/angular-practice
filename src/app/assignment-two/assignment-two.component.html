@@ -1,0 +1,9 @@
+<input type="text" class="form-control" [(ngModel)]="username" />
+<p>{{ username }}</p>
+<button
+  class="button btn-primary"
+  [disabled]="!username"
+  (click)="onCreateUsername()"
+>
+  Add Username
+</button>

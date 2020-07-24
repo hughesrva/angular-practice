@@ -10,16 +10,10 @@ export class ServerComponent {
   serverStatus: string;
 
   getServerID() {
-    this.serverID = Math.floor(Math.random() * 21);
-    return this.serverID;
+    return (this.serverID = Math.floor(Math.random() * 21));
   }
 
   getServerStatus() {
-    if (this.serverID > 10) {
-      this.serverStatus = 'offline';
-    } else {
-      this.serverStatus = 'online';
-    }
-    return this.serverStatus;
+    return this.serverID > 10 ? 'offline' : 'online';
   }
 }
