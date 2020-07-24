@@ -1,3 +1,12 @@
 <div class="row"><h2>This is the Servers component.</h2></div>
+<div class="row">
+  <button class="button btn-primary" [disabled]="!allowNewServer">
+    Add Server
+  </button>
+</div>
+<div class="row">
+  <p [innerText]="allowNewServer"></p>
+</div>
+
 <app-server></app-server>
 <app-server></app-server>
