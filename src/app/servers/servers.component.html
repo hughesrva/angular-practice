@@ -13,7 +13,10 @@
   </button>
 </div>
 <div class="row">
-  <p>{{ serverCreationStatus }}</p>
+  <!-- <p>{{ serverCreationStatus }}</p> -->
+  <p *ngIf="serverCreated">
+    Server was created, server name is {{ serverName }}
+  </p>
 </div>
 
 <app-server></app-server>
