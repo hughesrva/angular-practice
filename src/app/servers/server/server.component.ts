@@ -4,16 +4,18 @@ import { Component } from '@angular/core';
   selector: 'app-server',
   templateUrl: './server.component.html',
   styleUrls: ['./server.component.css'],
+  styles: ['.online{color: white}'],
 })
 export class ServerComponent {
   serverID: number;
   serverStatus: string;
 
-  getServerID() {
-    return (this.serverID = Math.floor(Math.random() * 21));
+  constructor() {
+    this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
+    this.serverID = Math.floor(Math.random() * 21);
   }
 
-  getServerStatus() {
-    return this.serverID > 10 ? 'offline' : 'online';
+  getColor() {
+    return this.serverStatus === 'online' ? 'green' : 'red';
   }
 }

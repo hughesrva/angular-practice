@@ -1,0 +1,15 @@
+<button (click)="onClick()">Toggle Details</button>
+
+<p *ngIf="isClicked">Shh! This is a secret!</p>
+
+<div
+  *ngFor="let click of clickList; let i = index"
+  [ngStyle]="{
+    backgroundColor: i >= 4 ? 'blue' : 'transparent'
+  }"
+  [ngClass]="{
+    'white-text': i >= 4
+  }"
+>
+  {{ click }}
+</div>
