@@ -10,6 +10,10 @@ import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { AssignmentTwoComponent } from './assignment-two/assignment-two.component';
 import { AssignmentThreeComponent } from './assignment-three/assignment-three.component';
+import { AssignmentFourComponent } from './assignment-four/assignment-four.component';
+import { GameControlComponent } from './assignment-four/game-control/game-control.component';
+import { OddComponent } from './assignment-four/odd/odd.component';
+import { EvenComponent } from './assignment-four/even/even.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +24,10 @@ import { AssignmentThreeComponent } from './assignment-three/assignment-three.co
     SuccessAlertComponent,
     AssignmentTwoComponent,
     AssignmentThreeComponent,
+    AssignmentFourComponent,
+    GameControlComponent,
+    OddComponent,
+    EvenComponent,
   ],
   imports: [FormsModule, BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
