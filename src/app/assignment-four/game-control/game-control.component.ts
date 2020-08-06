@@ -9,15 +9,12 @@ export class GameControlComponent implements OnInit {
   clickCount = 0;
   interval;
 
-  @Output() startClicked = new EventEmitter<{
-    clickCount: number;
-  }>();
+  @Output() startClicked = new EventEmitter<number>();
+  @Output() restartClicked = new EventEmitter<number>();
 
   onStartClick() {
     this.interval = setInterval(() => {
-      this.startClicked.emit({
-        clickCount: this.clickCount++,
-      });
+      this.startClicked.emit(this.clickCount++);
       console.log(this.clickCount);
     }, 1000);
   }
@@ -26,6 +23,12 @@ export class GameControlComponent implements OnInit {
     clearInterval(this.interval);
     console.log('Game stopped!');
   }
+
+  onRestartClick() {
+    clearInterval(this.interval);
+    this.clickCount = 0;
+  }
+
   constructor() {}
 
   ngOnInit(): void {}

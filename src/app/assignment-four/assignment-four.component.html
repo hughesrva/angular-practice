@@ -1,3 +1,7 @@
-<app-game-control></app-game-control>
-<app-odd></app-odd>
-<app-even></app-even>
+<app-game-control
+  (startClicked)="onGameStarted($event)"
+  (restartClicked)="onGameRestarted()"
+></app-game-control>
+
+<app-odd *ngFor="let number of oddNumbers" [number]="number"></app-odd>
+<app-even *ngFor="let number of evenNumbers" [number]="number"></app-even>

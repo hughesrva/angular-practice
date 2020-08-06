@@ -6,9 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./assignment-four.component.css'],
 })
 export class AssignmentFourComponent implements OnInit {
-  clickNumbers = [];
-  onGameStarted(countData: { clickCount: number }) {
-    
+  oddNumbers: number[] = [];
+  evenNumbers: number[] = [];
+
+  onGameStarted(clickCount: number) {
+    if (clickCount % 2 === 0) {
+      this.evenNumbers.push(clickCount);
+    } else {
+      this.oddNumbers.push(clickCount);
+    }
+  }
+
+  onGameRestarted() {
+    this.oddNumbers = [];
+    this.evenNumbers = [];
   }
   constructor() {}
 
